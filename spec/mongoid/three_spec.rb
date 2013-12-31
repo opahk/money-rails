@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-if defined?(Mongoid) && ::Mongoid::VERSION =~ /^3(.*)/
+if defined?(Mongoid) && ::Mongoid::VERSION =~ /^(3|4)(.*)/
 
   describe Money do
     let!(:priceable) { Priceable.create(:price => Money.new(100, 'EUR')) }
